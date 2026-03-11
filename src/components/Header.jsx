@@ -1,0 +1,65 @@
+import { useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
+import './Header.css';
+
+const NAV_LINKS = [
+  { to: '/', label: 'Home' },
+  { to: '/systems', label: 'Systems' },
+  { to: '/forum', label: 'Forum' },
+  { to: '/studio', label: 'Studio' },
+  { to: '/work', label: 'Work' },
+  { to: '/about', label: 'About' },
+  { to: '/contact', label: 'Contact' },
+];
+
+export default function Header() {
+  const [menuOpen, setMenuOpen] = useState(false);
+  const location = useLocation();
+
+  return (
+    <header className="aksent-header">
+      <div className="aksent-header__inner container">
+        <Link to="/" className="aksent-header__logo" aria-label="AKSENT Home">
+          AKSENT
+        </Link>
+        <button
+          type="button"
+          className="aksent-header__toggle"
+          aria-expanded={menuOpen}
+          aria-controls="nav-menu"
+          onClick={() => setMenuOpen(!menuOpen)}
+          aria-label="Toggle menu"
+        >
+          <span className="aksent-header__toggle-bar" />
+          <span className="aksent-header__toggle-bar" />
+          <span className="aksent-header__toggle-bar" />
+        </button>
+        <nav
+          id="nav-menu"
+          className={`aksent-header__nav ${menuOpen ? 'aksent-header__nav--open' : ''}`}
+        >
+          <ul className="aksent-header__nav-list">
+            {NAV_LINKS.map(({ to, label }) => (
+              <li key={to}>
+                <Link
+                  to={to}
+                  className={`aksent-header__nav-link ${location.pathname === to ? 'aksent-header__nav-link--active' : ''}`}
+                  onClick={() => setMenuOpen(false)}
+                >
+                  {label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+          <Link
+            to="/contact"
+            className="aksent-header__cta"
+            onClick={() => setMenuOpen(false)}
+          >
+            Get in touch
+          </Link>
+        </nav>
+      </div>
+    </header>
+  );
+}
