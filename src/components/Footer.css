@@ -23,8 +23,24 @@
 
 @media (min-width: 640px) {
   .aksent-footer__grid {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 2fr 1fr 1fr;
   }
+}
+
+.aksent-footer__brand-name {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: var(--aksent-white);
+  margin: 0 0 var(--space-sm);
+}
+
+.aksent-footer__tagline {
+  font-size: 0.8rem;
+  color: var(--aksent-green-300);
+  line-height: 1.6;
+  max-width: 28ch;
+  margin: 0;
 }
 
 .aksent-footer__heading {
@@ -49,6 +65,7 @@
 
 .aksent-footer__contact-list li {
   margin-bottom: var(--space-sm);
+  line-height: 1.5;
 }
 
 .aksent-footer__bottom {
@@ -57,14 +74,6 @@
   align-items: center;
   justify-content: space-between;
   gap: var(--space-md);
-}
-
-.aksent-footer__brand {
-  font-family: var(--font-display);
-  font-weight: 700;
-  font-size: 1.25rem;
-  margin: 0;
-  color: var(--aksent-white);
 }
 
 .aksent-footer__copy {

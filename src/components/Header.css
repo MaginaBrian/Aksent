@@ -14,16 +14,19 @@
 }
 
 .aksent-header__logo {
-  font-family: var(--font-display);
-  font-weight: 700;
-  font-size: 1.25rem;
-  letter-spacing: 0.02em;
-  color: var(--aksent-green-900);
+  display: flex;
+  align-items: center;
   text-decoration: none;
 }
 
+.aksent-header__logo-img {
+  height: 3.75rem;
+  width: auto;
+  display: block;
+}
+
 .aksent-header__logo:hover {
-  color: var(--aksent-green-700);
+  opacity: 0.85;
 }
 
 .aksent-header__toggle {

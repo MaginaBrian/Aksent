@@ -4,9 +4,6 @@ import './Header.css';
 
 const NAV_LINKS = [
   { to: '/', label: 'Home' },
-  { to: '/systems', label: 'Systems' },
-  { to: '/forum', label: 'Forum' },
-  { to: '/studio', label: 'Studio' },
   { to: '/work', label: 'Work' },
   { to: '/about', label: 'About' },
   { to: '/contact', label: 'Contact' },
@@ -20,7 +17,7 @@ export default function Header() {
     <header className="aksent-header">
       <div className="aksent-header__inner container">
         <Link to="/" className="aksent-header__logo" aria-label="AKSENT Home">
-          AKSENT
+          <img src="/aksent-logo.jpg" alt="AKSENT Creative Services" className="aksent-header__logo-img" />
         </Link>
         <button
           type="button"
@@ -56,7 +53,7 @@ export default function Header() {
             className="aksent-header__cta"
             onClick={() => setMenuOpen(false)}
           >
-            Get in touch
+            Start a conversation
           </Link>
         </nav>
       </div>

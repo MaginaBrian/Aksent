@@ -4,20 +4,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
 
 :root {
-  /* Core palette – deep green */
-  --aksent-green-900: #1a3329;
-  --aksent-green-800: #234a3a;
-  --aksent-green-700: #2d5f4a;
-  --aksent-green-600: #3a7a5e;
-  --aksent-green-500: #4a9472;
+  /* Core palette – premium deep green (Muthithi refinements) */
+  --aksent-green-900: #1F3D33;   /* Primary AKSENT green */
+  --aksent-green-800: #2F5A49;   /* Accent hover */
+  --aksent-green-700: #2F5A49;   /* Button */
+  --aksent-green-600: #2F5A49;
+  --aksent-green-500: #3a7a5e;
   --aksent-green-400: #6bb08e;
   --aksent-green-300: #8fc9a8;
   --aksent-green-200: #b8dfc8;
-  --aksent-green-100: #e2f2e8;
+  --aksent-green-100: #EEF3EF;   /* Background light */
 
   /* Neutrals */
   --aksent-black: #0f1412;
-  --aksent-gray-900: #1c221f;
+  --aksent-gray-900: #1C2A24;    /* Text */
   --aksent-gray-700: #4a524d;
   --aksent-gray-500: #7a827c;
   --aksent-gray-300: #b8bdb9;
@@ -65,7 +65,7 @@ body {
   font-size: 1rem;
   line-height: 1.6;
   color: var(--aksent-gray-900);
-  background-color: var(--aksent-white);
+  background-color: var(--aksent-green-100);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

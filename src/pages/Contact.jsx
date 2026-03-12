@@ -7,7 +7,7 @@ export default function Contact() {
         <div className="container">
           <h1 className="page-hero__title">Contact</h1>
           <p className="page-hero__lead">
-            Get in touch to discuss knowledge systems, publishing, or studio work. We’d be glad to hear from you.
+            Start a conversation to discuss knowledge systems, publishing, or studio work. We’d be glad to hear from you.
           </p>
         </div>
       </section>
@@ -24,7 +24,7 @@ export default function Contact() {
             </div>
             <div className="contact-block">
               <h2 className="contact-block__heading">Address</h2>
-              <p>Mbaazi Street, Nairobi, Kenya</p>
+              <p>Jabavu Road, PCEA Flats, Kilimani, Nairobi, Kenya</p>
             </div>
             <div className="contact-block">
               <h2 className="contact-block__heading">Web</h2>

@@ -27,7 +27,7 @@ export default function Forum() {
               <li>Partnership and co-publishing</li>
             </ul>
             <p>
-              <Link to="/contact" className="btn btn--primary">Get in touch</Link>
+              <Link to="/contact" className="btn btn--primary">Start a conversation</Link>
             </p>
           </div>
         </div>
