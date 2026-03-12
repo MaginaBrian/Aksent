@@ -1,15 +1,15 @@
 .aksent-footer {
-  background: var(--aksent-green-900);
-  color: var(--aksent-green-100);
+  background: var(--aksent-lime);
+  color: var(--aksent-white);
   padding: var(--space-2xl) 0 var(--space-xl);
 }
 
 .aksent-footer a {
-  color: var(--aksent-green-200);
+  color: var(--aksent-white);
 }
 
 .aksent-footer a:hover {
-  color: var(--aksent-white);
+  color: var(--aksent-amethyst);
 }
 
 .aksent-footer__grid {
@@ -18,7 +18,7 @@
   gap: var(--space-xl);
   margin-bottom: var(--space-2xl);
   padding-bottom: var(--space-xl);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
 }
 
 @media (min-width: 640px) {
@@ -37,7 +37,7 @@
 
 .aksent-footer__tagline {
   font-size: 0.8rem;
-  color: var(--aksent-green-300);
+  color: rgba(255,255,255,0.9);
   line-height: 1.6;
   max-width: 28ch;
   margin: 0;
@@ -49,7 +49,7 @@
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  color: var(--aksent-green-300);
+  color: rgba(255,255,255,0.9);
   margin-bottom: var(--space-md);
 }
 
@@ -78,19 +78,19 @@
 
 .aksent-footer__copy {
   font-size: 0.875rem;
-  color: var(--aksent-green-300);
+  color: rgba(255,255,255,0.9);
   margin: 0;
 }
 
 .aksent-footer__cta {
   padding: var(--space-sm) var(--space-md);
   font-weight: 600;
-  color: var(--aksent-green-900);
-  background: var(--aksent-green-300);
+  color: var(--aksent-white);
+  background: var(--aksent-amethyst);
   border-radius: 4px;
 }
 
 .aksent-footer__cta:hover {
-  background: var(--aksent-white);
-  color: var(--aksent-green-900);
+  background: var(--aksent-amethyst-hover);
+  color: var(--aksent-white);
 }

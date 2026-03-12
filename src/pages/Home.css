@@ -1,39 +1,30 @@
 /* ── HERO ── */
 .hero {
   padding: var(--space-3xl) 0;
-  background: var(--aksent-green-100);
+  background: var(--aksent-platinum);
 }
 
 .hero__inner {
   max-width: 56rem;
 }
 
-.hero__eyebrow {
-  font-family: var(--font-body);
-  font-size: 0.75rem;
-  font-weight: 700;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: var(--aksent-green-700);
-  margin-bottom: var(--space-md);
-}
-
 .hero__title {
   font-family: var(--font-display);
   font-size: clamp(2.25rem, 5.5vw, 3.5rem);
-  color: var(--aksent-green-900);
+  color: var(--aksent-ink);
   line-height: 1.15;
   margin-bottom: var(--space-md);
 }
 
 .hero__title-sub {
-  color: var(--aksent-green-700);
-  font-style: italic;
+  font-weight: 400;
+  color: var(--aksent-ink);
+  opacity: 0.88;
 }
 
 .hero__lead {
   font-size: 1.125rem;
-  color: var(--aksent-gray-700);
+  color: var(--aksent-ink);
   margin-bottom: var(--space-xl);
   max-width: 54ch;
 }
@@ -57,24 +48,24 @@
 }
 
 .btn--primary {
-  background: var(--aksent-green-700);
+  background: var(--aksent-amethyst);
   color: var(--aksent-white);
 }
 
 .btn--primary:hover {
-  background: var(--aksent-green-800);
+  background: var(--aksent-amethyst-hover);
   color: var(--aksent-white);
 }
 
 .btn--secondary {
   background: transparent;
-  color: var(--aksent-green-800);
-  border: 2px solid var(--aksent-green-600);
+  color: var(--aksent-amethyst);
+  border: 2px solid var(--aksent-amethyst);
 }
 
 .btn--secondary:hover {
-  background: var(--aksent-green-100);
-  color: var(--aksent-green-900);
+  background: rgba(179, 23, 180, 0.08);
+  color: var(--aksent-amethyst-hover);
 }
 
 .btn--large {
@@ -95,22 +86,26 @@
   padding-bottom: var(--space-md);
 }
 
+.section-header .section-title {
+  color: var(--aksent-ink);
+}
+
 .section-title {
   font-family: var(--font-display);
   font-size: clamp(1.25rem, 2.5vw, 1.75rem);
-  color: var(--aksent-green-900);
+  color: var(--aksent-ink);
   margin: 0;
 }
 
 .section-link {
   font-size: 0.9375rem;
   font-weight: 600;
-  color: var(--aksent-green-700);
+  color: var(--aksent-lime);
   white-space: nowrap;
 }
 
 .section-link:hover {
-  color: var(--aksent-green-900);
+  color: var(--aksent-amethyst);
 }
 
 .work-grid {
@@ -134,13 +129,13 @@
 }
 
 .work-tile:hover {
-  box-shadow: 0 4px 24px rgba(31, 61, 51, 0.1);
+  box-shadow: 0 4px 24px rgba(31, 42, 40, 0.12);
 }
 
 .work-tile__image-placeholder {
   width: 100%;
   aspect-ratio: 16 / 9;
-  background: var(--aksent-green-100);
+  background: var(--aksent-platinum);
   border-bottom: 1px solid var(--aksent-gray-100);
 }
 
@@ -154,28 +149,29 @@
   font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--aksent-green-700);
+  color: var(--aksent-lime);
   margin-bottom: var(--space-xs);
 }
 
 .work-tile__client {
   font-family: var(--font-display);
   font-size: 1.125rem;
-  color: var(--aksent-green-900);
+  color: var(--aksent-ink);
   margin-bottom: var(--space-xs);
 }
 
 .work-tile__desc {
   font-size: 0.9375rem;
-  color: var(--aksent-gray-700);
+  color: var(--aksent-ink);
   margin: 0;
   max-width: none;
+  opacity: 0.9;
 }
 
 /* ── WHAT WE DO ── */
 .what-we-do {
   padding: var(--space-3xl) 0;
-  background: var(--aksent-green-900);
+  background: var(--aksent-lime);
   color: var(--aksent-white);
 }
 
@@ -198,7 +194,7 @@
   font-weight: 700;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: var(--aksent-green-300);
+  color: rgba(255,255,255,0.9);
   padding-top: 0.25rem;
 }
 
@@ -212,7 +208,7 @@
 
 .what-we-do__sub {
   font-size: 1rem;
-  color: var(--aksent-green-300);
+  color: rgba(255,255,255,0.9);
   margin: 0 0 var(--space-md);
 }
 
@@ -224,13 +220,20 @@
 
 .what-we-do__list li {
   padding: var(--space-sm) 0;
-  border-top: 1px solid rgba(255,255,255,0.1);
-  color: var(--aksent-green-200);
+  border-top: 1px solid rgba(255,255,255,0.2);
   font-size: 1.0625rem;
 }
 
+.what-we-do__list li a {
+  color: var(--aksent-white);
+}
+
+.what-we-do__list li a:hover {
+  color: var(--aksent-amethyst);
+}
+
 .what-we-do__list li:last-child {
-  border-bottom: 1px solid rgba(255,255,255,0.1);
+  border-bottom: 1px solid rgba(255,255,255,0.2);
 }
 
 /* ── DESIGN IS STRUCTURE ── */
@@ -243,7 +246,7 @@
 .design-structure__title {
   font-family: var(--font-display);
   font-size: clamp(1.75rem, 4vw, 3rem);
-  color: var(--aksent-green-900);
+  color: var(--aksent-ink);
   font-style: italic;
   margin: 0;
 }
@@ -251,7 +254,7 @@
 /* ── CLIENTS ── */
 .clients {
   padding: var(--space-2xl) 0;
-  background: var(--aksent-green-100);
+  background: var(--aksent-platinum);
 }
 
 .clients__label {
@@ -259,7 +262,8 @@
   font-weight: 700;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: var(--aksent-gray-500);
+  color: var(--aksent-ink);
+  opacity: 0.7;
   margin-bottom: var(--space-xl);
 }
 
@@ -286,11 +290,20 @@
   min-height: 80px;
 }
 
+.client-logo__img {
+  max-height: 3.5rem;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+  display: block;
+}
+
 .client-logo__name {
   font-family: var(--font-body);
   font-size: 0.8125rem;
   font-weight: 600;
-  color: var(--aksent-gray-500);
+  color: var(--aksent-ink);
+  opacity: 0.8;
   text-align: center;
   line-height: 1.4;
 }
@@ -307,12 +320,13 @@
 .cta-section__title {
   font-family: var(--font-display);
   font-size: clamp(1.5rem, 3vw, 2.25rem);
-  color: var(--aksent-green-900);
+  color: var(--aksent-ink);
   margin-bottom: var(--space-md);
 }
 
 .cta-section__text {
   font-size: 1.0625rem;
-  color: var(--aksent-gray-700);
+  color: var(--aksent-ink);
   margin-bottom: var(--space-xl);
+  opacity: 0.9;
 }

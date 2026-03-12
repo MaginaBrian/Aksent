@@ -1,18 +1,18 @@
 .page-hero {
   padding: var(--space-2xl) 0;
-  background: var(--aksent-green-100);
+  background: var(--aksent-platinum);
 }
 
 .page-hero__title {
   font-family: var(--font-display);
   font-size: clamp(2rem, 4vw, 2.75rem);
-  color: var(--aksent-green-900);
+  color: var(--aksent-ink);
   margin-bottom: var(--space-md);
 }
 
 .page-hero__lead {
   font-size: 1.125rem;
-  color: var(--aksent-gray-900);
+  color: var(--aksent-ink);
   max-width: 60ch;
   margin: 0;
 }
@@ -27,7 +27,7 @@
 
 .prose h2 {
   font-size: 1.5rem;
-  color: var(--aksent-green-900);
+  color: var(--aksent-ink);
   margin-top: var(--space-xl);
   margin-bottom: var(--space-sm);
 }
@@ -52,8 +52,8 @@
 .pull-quote {
   margin: var(--space-xl) 0;
   padding: var(--space-lg);
-  border-left: 4px solid var(--aksent-green-600);
-  background: var(--aksent-green-100);
+  border-left: 4px solid var(--aksent-lime);
+  background: var(--aksent-platinum);
   font-style: italic;
 }
 
@@ -124,7 +124,7 @@
   font-family: var(--font-display);
   font-size: clamp(1.5rem, 3vw, 2rem);
   font-weight: 700;
-  color: var(--aksent-green-900);
+  color: var(--aksent-ink);
   margin-bottom: var(--space-xs);
 }
 
@@ -147,11 +147,11 @@
 }
 
 .btn--primary {
-  background: var(--aksent-green-700);
+  background: var(--aksent-amethyst);
   color: var(--aksent-white);
 }
 
 .btn--primary:hover {
-  background: var(--aksent-green-800);
+  background: var(--aksent-amethyst-hover);
   color: var(--aksent-white);
 }

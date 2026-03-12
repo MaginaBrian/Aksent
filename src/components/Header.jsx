@@ -47,7 +47,17 @@ export default function Header() {
           </ul>
         </nav>
         <Link to="/" className="aksent-header__logo" aria-label="AKSENT Home">
-          <img src="/aksent-logo.jpg" alt="AKSENT Creative Services" className="aksent-header__logo-img" />
+          <img
+            src="/aksent-logo.png"
+            alt="AKSENT Creative Services"
+            className="aksent-header__logo-img aksent-header__logo-img--full"
+          />
+          <img
+            src="/favicon.png"
+            alt="AKSENT"
+            className="aksent-header__logo-img aksent-header__logo-img--icon"
+            aria-hidden="true"
+          />
         </Link>
         <Link
           to="/contact"

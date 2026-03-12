@@ -2,8 +2,8 @@
   position: sticky;
   top: 0;
   z-index: 100;
-  background: var(--aksent-green-100);
-  border-bottom: 1px solid var(--aksent-green-200);
+  background: var(--aksent-platinum);
+  border-bottom: 1px solid var(--aksent-gray-100);
 }
 
 .aksent-header__inner {
@@ -20,13 +20,33 @@
   justify-content: center;
   text-decoration: none;
   flex-shrink: 0;
+  background: transparent;
+  border: none;
+  padding: 0;
 }
 
 .aksent-header__logo-img {
   height: 4.5rem;
   width: auto;
-  display: block;
   object-fit: contain;
+}
+
+.aksent-header__logo-img--icon {
+  display: none;
+  height: 2.5rem;
+}
+
+.aksent-header__logo-img--full {
+  display: block;
+}
+
+@media (max-width: 420px) {
+  .aksent-header__logo-img--full {
+    display: none;
+  }
+  .aksent-header__logo-img--icon {
+    display: block;
+  }
 }
 
 .aksent-header__logo:hover {
@@ -46,7 +66,7 @@
 .aksent-header__toggle-bar {
   width: 24px;
   height: 2px;
-  background: var(--aksent-green-900);
+  background: var(--aksent-ink);
   transition: transform 0.2s ease;
 }
 
@@ -55,8 +75,8 @@
   top: var(--header-height);
   left: 0;
   right: 0;
-  background: var(--aksent-green-100);
-  border-bottom: 1px solid var(--aksent-green-200);
+  background: var(--aksent-platinum);
+  border-bottom: 1px solid var(--aksent-gray-100);
   padding: var(--space-md);
   transform: translateY(-100%);
   opacity: 0;
@@ -79,7 +99,7 @@
 
 .aksent-header__nav-list li {
   margin: 0;
-  border-bottom: 1px solid var(--aksent-green-200);
+  border-bottom: 1px solid var(--aksent-gray-100);
 }
 
 .aksent-header__nav-link {
@@ -87,12 +107,12 @@
   padding: var(--space-sm) 0;
   font-size: 1rem;
   font-weight: 500;
-  color: var(--aksent-gray-900);
+  color: var(--aksent-ink);
 }
 
 .aksent-header__nav-link:hover,
 .aksent-header__nav-link--active {
-  color: var(--aksent-green-800);
+  color: var(--aksent-amethyst);
 }
 
 .aksent-header__cta {
@@ -102,13 +122,13 @@
   text-align: center;
   font-weight: 600;
   color: var(--aksent-white);
-  background: var(--aksent-green-700);
+  background: var(--aksent-amethyst);
   border-radius: 4px;
   transition: background 0.2s ease;
 }
 
 .aksent-header__cta:hover {
-  background: var(--aksent-green-800);
+  background: var(--aksent-amethyst-hover);
   color: var(--aksent-white);
 }
 
@@ -154,8 +174,12 @@
     padding: var(--space-xs) var(--space-sm);
   }
 
-  .aksent-header__logo-img {
+  .aksent-header__logo-img--full {
     height: 5rem;
+    display: block;
+  }
+  .aksent-header__logo-img--icon {
+    display: none;
   }
 
   .aksent-header__cta {

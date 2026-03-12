@@ -25,10 +25,13 @@ const SELECTED_WORK = [
 ];
 
 const CLIENT_LOGOS = [
-  'Africa Bioenergy Programs',
-  'WomanKind Worldwide',
-  'Hivos',
-  'AmCham Kenya',
+  { name: 'Acorn Law', logo: '/client-logos/Acorn-Law-Logo-white-bg.jpg' },
+  { name: 'ACRE', logo: '/client-logos/ACRE-LOGO-2.png' },
+  { name: 'Hivos', logo: '/client-logos/Hivos-logo.png' },
+  { name: 'ICPAC', logo: '/client-logos/Icpac-logo.png' },
+  { name: 'Kalua Farms', logo: '/client-logos/Kalua-Farms-logos-4-8217.jpg' },
+  { name: 'KBP', logo: '/client-logos/KBP-Logo-01.jpg' },
+  { name: 'KRK Advocates', logo: '/client-logos/KRK-Advocates-Logo.png' },
 ];
 
 export default function Home() {
@@ -37,7 +40,6 @@ export default function Home() {
       <section className="hero">
         <div className="container hero__inner">
           <div className="hero__content">
-            <p className="hero__eyebrow">AKSENT</p>
             <h1 className="hero__title">
               Clarity is structure.<br />
               <span className="hero__title-sub">Knowledge systems, rooted in design.</span>
@@ -86,10 +88,10 @@ export default function Home() {
             </p>
             <p className="what-we-do__sub">Our work focuses on:</p>
             <ul className="what-we-do__list">
-              <li>Campaign communication</li>
-              <li>Research and publication design</li>
-              <li>Institutional storytelling</li>
-              <li>Brand and communication systems</li>
+              <li><Link to="/work#campaign-communication">Campaign communication</Link></li>
+              <li><Link to="/work#research-publication">Research and publication design</Link></li>
+              <li><Link to="/work#institutional-storytelling">Institutional storytelling</Link></li>
+              <li><Link to="/work#brand-systems">Brand and communication systems</Link></li>
             </ul>
           </div>
         </div>
@@ -105,9 +107,14 @@ export default function Home() {
         <div className="container">
           <p className="clients__label">Trusted by</p>
           <div className="clients__grid">
-            {CLIENT_LOGOS.map((name, i) => (
+            {CLIENT_LOGOS.map((item, i) => (
               <div key={i} className="client-logo">
-                <span className="client-logo__name">{name}</span>
+                <img
+                  src={item.logo}
+                  alt={item.name}
+                  className="client-logo__img"
+                />
+                <span className="client-logo__name sr-only">{item.name}</span>
               </div>
             ))}
           </div>
