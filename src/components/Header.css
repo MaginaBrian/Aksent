@@ -26,14 +26,14 @@
 }
 
 .aksent-header__logo-img {
-  height: 5rem;
+  height: 8rem;
   width: auto;
   object-fit: contain;
-  transition: transform 0.25s ease;
+  transition: transform 0.3s ease;
 }
 
 .aksent-header__logo:hover .aksent-header__logo-img {
-  transform: scale(1.08);
+  transform: scale(1.15);
 }
 
 .aksent-header__logo-img--icon {
@@ -117,24 +117,6 @@
   color: var(--aksent-amethyst);
 }
 
-.aksent-header__cta {
-  display: block;
-  margin-top: var(--space-md);
-  padding: 0.5rem 0.75rem;
-  font-size: 0.875rem;
-  text-align: center;
-  font-weight: 600;
-  color: var(--aksent-white);
-  background: #9a5a9b;
-  border-radius: 4px;
-  transition: background 0.2s ease;
-}
-
-.aksent-header__cta:hover {
-  background: #854686;
-  color: var(--aksent-white);
-}
-
 @media (min-width: 768px) {
   .aksent-header__inner {
     display: flex;
@@ -183,21 +165,10 @@
   }
 
   .aksent-header__logo-img--full {
-    height: 6rem;
+    height: 9rem;
     display: block;
   }
   .aksent-header__logo-img--icon {
     display: none;
-  }
-
-  .aksent-header__cta {
-    order: 3;
-    margin-top: 0;
-    padding: var(--space-xs) var(--space-md);
-    font-size: 1rem;
-    background: var(--aksent-amethyst);
-  }
-  .aksent-header__cta:hover {
-    background: var(--aksent-amethyst-hover);
   }
 }

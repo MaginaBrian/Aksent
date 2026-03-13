@@ -59,13 +59,6 @@ export default function Header() {
             ))}
           </ul>
         </nav>
-        <Link
-          to="/contact"
-          className="aksent-header__cta"
-          onClick={() => menuOpen && setMenuOpen(false)}
-        >
-          Start a conversation
-        </Link>
       </div>
     </header>
   );
