@@ -9,7 +9,6 @@ export default function About() {
           <h1 className="page-hero__title">Who we are</h1>
           <p className="page-hero__lead">
             AKSENT was founded in 2009 as a design studio.
-            Over the past fifteen years the practice has evolved toward knowledge communication and institutional storytelling.
           </p>
         </div>
       </section>
@@ -17,7 +16,22 @@ export default function About() {
         <div className="container">
           <div className="prose">
             <p>
-              Today AKSENT works with research organisations, foundations, and businesses to translate complex work into communication people understand.
+              Over time the practice expanded beyond traditional design work into the field of knowledge communication — helping organisations translate complex research, programmes, and institutional work into communication that people can understand.
+            </p>
+            <p>
+              Today AKSENT operates at the intersection of design, knowledge systems, and institutional storytelling.
+            </p>
+            <p>
+              We work with research organisations, foundations, and mission-driven businesses that produce complex ideas and need those ideas to travel clearly across audiences.
+            </p>
+            <p>
+              Our role is to build the structures that allow that communication to happen — through publications, campaigns, and visual systems that make knowledge usable.
+            </p>
+
+            <h2>How we work</h2>
+            <p>
+              AKSENT approaches design as structure.
+              We organise information, shape narrative, and build visual systems that allow complex work to move clearly across audiences.
             </p>
 
             <h2>Experience</h2>
@@ -27,12 +41,12 @@ export default function About() {
                 <span className="about-stat__label">Years of design practice</span>
               </div>
               <div className="about-stat">
-                <span className="about-stat__value">Global</span>
-                <span className="about-stat__label">Network of collaborators</span>
+                <span className="about-stat__value">Cross-sector</span>
+                <span className="about-stat__label">Work with organisations in climate, gender equity, research, finance, and hospitality.</span>
               </div>
               <div className="about-stat">
-                <span className="about-stat__value">Cross-sector</span>
-                <span className="about-stat__label">Client experience</span>
+                <span className="about-stat__value">Global</span>
+                <span className="about-stat__label">Projects delivered across Africa, Europe, and global institutional networks.</span>
               </div>
             </div>
 

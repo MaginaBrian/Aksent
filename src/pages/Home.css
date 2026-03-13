@@ -17,9 +17,8 @@
 }
 
 .hero__title-sub {
-  font-weight: 400;
-  color: var(--aksent-ink);
-  opacity: 0.88;
+  font-style: italic;
+  color: #4a5a57;
 }
 
 .hero__lead {

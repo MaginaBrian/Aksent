@@ -118,17 +118,18 @@
 .aksent-header__cta {
   display: block;
   margin-top: var(--space-md);
-  padding: var(--space-sm) var(--space-md);
+  padding: 0.5rem 0.75rem;
+  font-size: 0.875rem;
   text-align: center;
   font-weight: 600;
   color: var(--aksent-white);
-  background: var(--aksent-amethyst);
+  background: #9a5a9b;
   border-radius: 4px;
   transition: background 0.2s ease;
 }
 
 .aksent-header__cta:hover {
-  background: var(--aksent-amethyst-hover);
+  background: #854686;
   color: var(--aksent-white);
 }
 
@@ -185,5 +186,10 @@
   .aksent-header__cta {
     margin-top: 0;
     padding: var(--space-xs) var(--space-md);
+    font-size: 1rem;
+    background: var(--aksent-amethyst);
+  }
+  .aksent-header__cta:hover {
+    background: var(--aksent-amethyst-hover);
   }
 }

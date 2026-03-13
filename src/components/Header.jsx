@@ -49,7 +49,7 @@ export default function Header() {
         <Link to="/" className="aksent-header__logo" aria-label="AKSENT Home">
           <img
             src="/aksent-logo.png"
-            alt="AKSENT Creative Services"
+            alt="AKSENT Knowledge Systems"
             className="aksent-header__logo-img aksent-header__logo-img--full"
           />
           <img
