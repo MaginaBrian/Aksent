@@ -16,6 +16,19 @@ export default function Header() {
   return (
     <header className="aksent-header">
       <div className="aksent-header__inner container">
+        <Link to="/" className="aksent-header__logo" aria-label="AKSENT Home">
+          <img
+            src="/aksent-logo.png"
+            alt="AKSENT Knowledge Systems"
+            className="aksent-header__logo-img aksent-header__logo-img--full"
+          />
+          <img
+            src="/favicon.png"
+            alt="AKSENT"
+            className="aksent-header__logo-img aksent-header__logo-img--icon"
+            aria-hidden="true"
+          />
+        </Link>
         <button
           type="button"
           className="aksent-header__toggle"
@@ -46,19 +59,6 @@ export default function Header() {
             ))}
           </ul>
         </nav>
-        <Link to="/" className="aksent-header__logo" aria-label="AKSENT Home">
-          <img
-            src="/aksent-logo.png"
-            alt="AKSENT Knowledge Systems"
-            className="aksent-header__logo-img aksent-header__logo-img--full"
-          />
-          <img
-            src="/favicon.png"
-            alt="AKSENT"
-            className="aksent-header__logo-img aksent-header__logo-img--icon"
-            aria-hidden="true"
-          />
-        </Link>
         <Link
           to="/contact"
           className="aksent-header__cta"

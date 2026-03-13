@@ -17,18 +17,23 @@
 .aksent-header__logo {
   display: flex;
   align-items: center;
-  justify-content: center;
   text-decoration: none;
   flex-shrink: 0;
   background: transparent;
   border: none;
   padding: 0;
+  order: 1;
 }
 
 .aksent-header__logo-img {
-  height: 4.5rem;
+  height: 5rem;
   width: auto;
   object-fit: contain;
+  transition: transform 0.25s ease;
+}
+
+.aksent-header__logo:hover .aksent-header__logo-img {
+  transform: scale(1.08);
 }
 
 .aksent-header__logo-img--icon {
@@ -49,9 +54,6 @@
   }
 }
 
-.aksent-header__logo:hover {
-  opacity: 0.9;
-}
 
 .aksent-header__toggle {
   display: flex;
@@ -135,14 +137,15 @@
 
 @media (min-width: 768px) {
   .aksent-header__inner {
-    display: grid;
-    grid-template-columns: 1fr auto 1fr;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
     align-items: center;
-    justify-items: start;
   }
 
-  .aksent-header__inner .aksent-header__cta {
-    justify-self: end;
+  .aksent-header__logo {
+    order: 1;
+    margin-right: 0;
   }
 
   .aksent-header__toggle {
@@ -150,9 +153,12 @@
   }
 
   .aksent-header__nav {
+    order: 2;
     position: static;
     display: flex;
     align-items: center;
+    justify-content: center;
+    flex: 1;
     gap: var(--space-lg);
     padding: 0;
     border: none;
@@ -164,6 +170,7 @@
   .aksent-header__nav-list {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: var(--space-sm);
   }
 
@@ -176,7 +183,7 @@
   }
 
   .aksent-header__logo-img--full {
-    height: 5rem;
+    height: 6rem;
     display: block;
   }
   .aksent-header__logo-img--icon {
@@ -184,6 +191,7 @@
   }
 
   .aksent-header__cta {
+    order: 3;
     margin-top: 0;
     padding: var(--space-xs) var(--space-md);
     font-size: 1rem;
