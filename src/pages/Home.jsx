@@ -1,28 +1,14 @@
+import { useState, useCallback, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { getProjectBySlug } from '../data/projects';
 import './Home.css';
 
-const SELECTED_WORK = [
-  {
-    client: 'Africa Bioenergy Programs',
-    description: 'Campaign communication for biodigester adoption',
-    tag: 'Campaign Communication',
-  },
-  {
-    client: 'WomanKind Worldwide',
-    description: 'Digital advocacy campaign',
-    tag: 'Digital Advocacy',
-  },
-  {
-    client: 'Hivos',
-    description: 'Knowledge publication design',
-    tag: 'Publication Design',
-  },
-  {
-    client: 'American Chamber of Commerce Kenya',
-    description: 'Business summit brand development',
-    tag: 'Brand Development',
-  },
-];
+const SELECTED_WORK_SLUGS = ['acre-africa', 'bima-salama'];
+
+const SELECTED_WORK = SELECTED_WORK_SLUGS.map((slug) => {
+  const p = getProjectBySlug(slug);
+  return p ? { slug: p.slug, title: p.title, description: p.description, image: p.images?.[0] } : null;
+}).filter(Boolean);
 
 const CLIENT_LOGOS = [
   { name: 'Acorn Law', logo: '/client-logos/Acorn-Law-Logo-white-bg.jpg' },
@@ -35,6 +21,22 @@ const CLIENT_LOGOS = [
 ];
 
 export default function Home() {
+  const [logoIndex, setLogoIndex] = useState(0);
+  const totalLogos = CLIENT_LOGOS.length;
+
+  const goPrevLogo = useCallback(() => {
+    setLogoIndex((i) => (i <= 0 ? totalLogos - 1 : i - 1));
+  }, [totalLogos]);
+
+  const goNextLogo = useCallback(() => {
+    setLogoIndex((i) => (i >= totalLogos - 1 ? 0 : i + 1));
+  }, [totalLogos]);
+
+  useEffect(() => {
+    const t = setInterval(goNextLogo, 4000);
+    return () => clearInterval(t);
+  }, [goNextLogo]);
+
   return (
     <>
       <section className="hero">
@@ -63,15 +65,20 @@ export default function Home() {
             <Link to="/work" className="section-link">All projects →</Link>
           </div>
           <div className="work-grid">
-            {SELECTED_WORK.map((item, i) => (
-              <article key={i} className="work-tile">
-                <div className="work-tile__image-placeholder" />
+            {SELECTED_WORK.map((item) => (
+              <Link key={item.slug} to={`/work/${item.slug}`} className="work-tile work-tile--project">
+                <div className="work-tile__media">
+                  {item.image ? (
+                    <img src={item.image} alt="" className="work-tile__img" />
+                  ) : (
+                    <div className="work-tile__image-placeholder" />
+                  )}
+                </div>
                 <div className="work-tile__body">
-                  <span className="work-tile__tag">{item.tag}</span>
-                  <h3 className="work-tile__client">{item.client}</h3>
+                  <h3 className="work-tile__client">{item.title}</h3>
                   <p className="work-tile__desc">{item.description}</p>
                 </div>
-              </article>
+              </Link>
             ))}
           </div>
         </div>
@@ -106,17 +113,46 @@ export default function Home() {
       <section className="clients">
         <div className="container">
           <p className="clients__label">Trusted by</p>
-          <div className="clients__grid">
-            {CLIENT_LOGOS.map((item, i) => (
-              <div key={i} className="client-logo">
-                <img
-                  src={item.logo}
-                  alt={item.name}
-                  className="client-logo__img"
+          <div className="clients-slider">
+            <button
+              type="button"
+              className="clients-slider__arrow clients-slider__arrow--prev"
+              onClick={goPrevLogo}
+              aria-label="Previous"
+            />
+            <div className="clients-slider__track">
+              {CLIENT_LOGOS.map((item, i) => (
+                <div
+                  key={i}
+                  className={`client-logo ${i === logoIndex ? 'is-active' : ''}`}
+                  aria-hidden={i !== logoIndex}
+                >
+                  <img
+                    src={item.logo}
+                    alt={item.name}
+                    className="client-logo__img"
+                  />
+                  <span className="client-logo__name sr-only">{item.name}</span>
+                </div>
+              ))}
+            </div>
+            <button
+              type="button"
+              className="clients-slider__arrow clients-slider__arrow--next"
+              onClick={goNextLogo}
+              aria-label="Next"
+            />
+            <div className="clients-slider__dots">
+              {CLIENT_LOGOS.map((_, i) => (
+                <button
+                  key={i}
+                  type="button"
+                  className={`clients-slider__dot ${i === logoIndex ? 'is-active' : ''}`}
+                  onClick={() => setLogoIndex(i)}
+                  aria-label={`Go to logo ${i + 1}`}
                 />
-                <span className="client-logo__name sr-only">{item.name}</span>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
       </section>

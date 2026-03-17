@@ -1,5 +1,5 @@
 .page-hero {
-  padding: var(--space-2xl) 0;
+  padding: var(--space-xl) 0 var(--space-lg);
   background: var(--aksent-platinum);
 }
 
@@ -18,7 +18,7 @@
 }
 
 .page-content {
-  padding: var(--space-2xl) 0;
+  padding: var(--space-lg) 0 var(--space-2xl);
 }
 
 .prose {
@@ -50,7 +50,7 @@
 }
 
 .pull-quote {
-  margin: var(--space-xl) 0;
+  margin: var(--space-lg) 0 var(--space-xl);
   padding: var(--space-lg);
   border-left: 4px solid var(--aksent-lime);
   background: var(--aksent-platinum);
@@ -105,13 +105,16 @@
 /* About stats */
 .about-stats {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: var(--space-lg);
   margin: var(--space-xl) 0;
-  padding: var(--space-xl) 0;
-  border-top: 1px solid var(--aksent-gray-100);
-  border-bottom: 1px solid var(--aksent-gray-100);
+  padding: var(--space-lg) var(--space-lg);
+  background: linear-gradient(135deg, rgba(167,184,65,0.28) 0%, rgba(179,23,180,0.12) 100%);
+  border-radius: 12px;
+  border: 1px solid rgba(31,42,40,0.10);
+  box-shadow: 0 10px 30px rgba(31,42,40,0.08);
 }
+
 
 @media (min-width: 640px) {
   .about-stats {
@@ -124,14 +127,15 @@
   font-family: var(--font-display);
   font-size: clamp(1.5rem, 3vw, 2rem);
   font-weight: 700;
-  color: var(--aksent-ink);
+  color: var(--aksent-amethyst);
   margin-bottom: var(--space-xs);
 }
 
 .about-stat__label {
   display: block;
   font-size: 0.9375rem;
-  color: var(--aksent-gray-500);
+  color: var(--aksent-ink);
+  opacity: 0.85;
 }
 
 /* Ensure btn available on inner pages */
@@ -154,4 +158,22 @@
 .btn--primary:hover {
   background: var(--aksent-amethyst-hover);
   color: var(--aksent-white);
+}
+
+/* About layout */
+.about-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-2xl);
+}
+
+@media (min-width: 768px) {
+  .about-layout {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: start;
+  }
+
+  .about-layout .prose {
+    max-width: none;
+  }
 }

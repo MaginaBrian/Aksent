@@ -1,5 +1,7 @@
 import { Link } from 'react-router-dom';
+import { PROJECTS } from '../data/projects';
 import './Page.css';
+import './Work.css';
 
 export default function Work() {
   return (
@@ -12,15 +14,32 @@ export default function Work() {
           </p>
         </div>
       </section>
-      <section className="page-content">
+      <section className="page-content work-content">
         <div className="container">
-          <div className="prose">
-            <p>
-              Case studies and studio documentation will be featured here. Each project showcases our triadic practice: Systems (knowledge architecture), Forum (publishing and circulation), and Studio (design and documentation).
-            </p>
-            <p>
-              <Link to="/contact" className="btn btn--primary">Discuss a project</Link>
-            </p>
+          <div className="work-grid work-grid--projects">
+            {PROJECTS.map((project) => (
+              <Link
+                key={project.slug}
+                to={`/work/${project.slug}`}
+                className="work-tile work-tile--project"
+              >
+                <div className="work-tile__media">
+                  {project.images.length > 0 ? (
+                    <img
+                      src={project.images[0]}
+                      alt=""
+                      className="work-tile__img"
+                    />
+                  ) : (
+                    <div className="work-tile__image-placeholder" />
+                  )}
+                </div>
+                <div className="work-tile__body">
+                  <h2 className="work-tile__client">{project.title}</h2>
+                  <p className="work-tile__desc">{project.description}</p>
+                </div>
+              </Link>
+            ))}
           </div>
         </div>
       </section>
