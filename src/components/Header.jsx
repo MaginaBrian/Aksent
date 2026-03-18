@@ -23,7 +23,7 @@ export default function Header() {
             className="aksent-header__logo-img aksent-header__logo-img--full"
           />
           <img
-            src="/favicon-48.png"
+            src="/favicon-32.png"
             alt="AKSENT"
             className="aksent-header__logo-img aksent-header__logo-img--icon"
             aria-hidden="true"

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { getProjectBySlug } from '../data/projects';
 import './Home.css';
 
-const SELECTED_WORK_SLUGS = ['acre-africa', 'bima-salama'];
+const SELECTED_WORK_SLUGS = ['amcham', 'hivos'];
 
 const SELECTED_WORK = SELECTED_WORK_SLUGS.map((slug) => {
   const p = getProjectBySlug(slug);
@@ -13,11 +13,13 @@ const SELECTED_WORK = SELECTED_WORK_SLUGS.map((slug) => {
 const CLIENT_LOGOS = [
   { name: 'Acorn Law', logo: '/client-logos/Acorn-Law-Logo-white-bg.jpg' },
   { name: 'ACRE', logo: '/client-logos/ACRE-LOGO-2.png' },
+  { name: 'Enaai', logo: '/client-logos/Enaai.png' },
   { name: 'Hivos', logo: '/client-logos/Hivos-logo.png' },
   { name: 'ICPAC', logo: '/client-logos/Icpac-logo.png' },
   { name: 'Kalua Farms', logo: '/client-logos/Kalua-Farms-logos-4-8217.jpg' },
   { name: 'KBP', logo: '/client-logos/KBP-Logo-01.jpg' },
   { name: 'KRK Advocates', logo: '/client-logos/KRK-Advocates-Logo.png' },
+  { name: 'PolycomGirls', logo: '/client-logos/PolycomGirls.svg' },
 ];
 
 export default function Home() {
