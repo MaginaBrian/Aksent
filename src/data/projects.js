@@ -9,9 +9,24 @@ const amchamImages = [
   '/projects/amcham/05.png',
   '/projects/amcham/06.png',
   '/projects/amcham/07.png',
+  '/projects/amcham/08.png',
+  '/projects/amcham/09.png',
+  '/projects/amcham/10.png',
+  '/projects/amcham/11.png',
 ];
 const africanBiodigesterImages = Array.from({ length: 16 }, (_, i) => `/projects/african-biodester/${i + 1}.jpg`);
-const acreAfricaImages = Array.from({ length: 20 }, (_, i) => `/projects/acre-africa/${String(i + 1).padStart(2, '0')}.jpg`);
+// ACRE Africa gallery: keep "page 9" first, then append new pages.
+const acreAfricaImages = [
+  '/projects/acre-africa/09.jpg',
+  '/projects/acre-africa/21.png',
+  '/projects/acre-africa/22.png',
+  '/projects/acre-africa/23.png',
+  '/projects/acre-africa/24.png',
+  '/projects/acre-africa/25.png',
+  '/projects/acre-africa/26.png',
+  '/projects/acre-africa/27.png',
+  '/projects/acre-africa/28.png',
+];
 const bimaSalamaImages = Array.from({ length: 6 }, (_, i) => `/projects/bima-salama/${String(i + 1).padStart(2, '0')}.jpg`);
 const krkAdvocatesImages = ['/projects/krk-advocates/01.png'];
 const redssImages = Array.from({ length: 3 }, (_, i) => `/projects/redss/${String(i + 1).padStart(2, '0')}.png`);
