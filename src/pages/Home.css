@@ -393,6 +393,8 @@
   max-width: 100%;
   object-fit: contain;
   display: block;
+  transform-origin: center;
+  transition: transform 0.2s ease;
 }
 
 .client-logo__name {

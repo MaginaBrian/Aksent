@@ -13,13 +13,14 @@ const SELECTED_WORK = SELECTED_WORK_SLUGS.map((slug) => {
 const CLIENT_LOGOS = [
   { name: 'Acorn Law', logo: '/client-logos/Acorn-Law-Logo-white-bg.jpg' },
   { name: 'ACRE', logo: '/client-logos/ACRE-LOGO-2.png' },
-  { name: 'Enaai', logo: '/client-logos/Enaai.png' },
-  { name: 'Hivos', logo: '/client-logos/Hivos-logo.png' },
-  { name: 'ICPAC', logo: '/client-logos/Icpac-logo.png' },
+  { name: 'Enaai', logo: '/client-logos/Enaai.png', scale: 1.18 },
+  { name: 'Hivos', logo: '/client-logos/Hivos-logo.png', scale: 1.14 },
+  { name: 'ICPAC', logo: '/client-logos/Icpac-logo.png', scale: 1.18 },
   { name: 'Kalua Farms', logo: '/client-logos/Kalua-Farms-logos-4-8217.jpg' },
   { name: 'KBP', logo: '/client-logos/KBP-Logo-01.jpg' },
   { name: 'KRK Advocates', logo: '/client-logos/KRK-Advocates-Logo.png' },
   { name: 'PolycomGirls', logo: '/client-logos/PolycomGirls.svg' },
+  { name: 'WomanKind Worldwide', logo: '/client-logos/WomanKindWorldwide.png' },
 ];
 
 export default function Home() {
@@ -133,6 +134,7 @@ export default function Home() {
                     src={item.logo}
                     alt={item.name}
                     className="client-logo__img"
+                    style={item.scale ? { transform: `scale(${item.scale})` } : undefined}
                   />
                   <span className="client-logo__name sr-only">{item.name}</span>
                 </div>
