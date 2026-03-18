@@ -3,6 +3,12 @@
  */
 const amchamImages = [
   '/projects/amcham/01.png',
+  '/projects/amcham/02.png',
+  '/projects/amcham/03.png',
+  '/projects/amcham/04.png',
+  '/projects/amcham/05.png',
+  '/projects/amcham/06.png',
+  '/projects/amcham/07.png',
 ];
 const africanBiodigesterImages = Array.from({ length: 16 }, (_, i) => `/projects/african-biodester/${i + 1}.jpg`);
 const acreAfricaImages = Array.from({ length: 20 }, (_, i) => `/projects/acre-africa/${String(i + 1).padStart(2, '0')}.jpg`);
