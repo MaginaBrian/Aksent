@@ -1,3 +1,4 @@
+import { useMemo, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { getProjectBySlug } from '../data/projects';
 import './Page.css';
@@ -6,6 +7,7 @@ import './Work.css';
 export default function WorkProject() {
   const { slug } = useParams();
   const project = getProjectBySlug(slug);
+  const [index, setIndex] = useState(0);
 
   if (!project) {
     return (
@@ -18,7 +20,9 @@ export default function WorkProject() {
     );
   }
 
-  const hasImages = project.images && project.images.length > 0;
+  const images = useMemo(() => project.images ?? [], [project.images]);
+  const hasImages = images.length > 0;
+  const currentSrc = hasImages ? images[Math.min(index, images.length - 1)] : null;
 
   return (
     <>
@@ -41,12 +45,32 @@ export default function WorkProject() {
               <Link to="/work" className="btn btn--primary">Back to Work</Link>
             </div>
           ) : (
-            <div className="work-scroll-gallery">
-              {project.images.map((src, i) => (
-                <div key={i} className="work-scroll-gallery__item">
-                  <img src={src} alt="" className="work-scroll-gallery__img" />
-                </div>
-              ))}
+            <div className="work-image-viewer" aria-label="Project images">
+              <div className="work-image-viewer__frame">
+                <button
+                  type="button"
+                  className="work-image-viewer__btn work-image-viewer__btn--icon work-image-viewer__btn--prev work-image-viewer__btn--overlay"
+                  onClick={() => setIndex((i) => (i <= 0 ? images.length - 1 : i - 1))}
+                  aria-label="Previous image"
+                >
+                  <span className="sr-only">Previous</span>
+                </button>
+                <img src={currentSrc} alt="" className="work-image-viewer__img" />
+                <button
+                  type="button"
+                  className="work-image-viewer__btn work-image-viewer__btn--icon work-image-viewer__btn--next work-image-viewer__btn--overlay"
+                  onClick={() => setIndex((i) => (i >= images.length - 1 ? 0 : i + 1))}
+                  aria-label="Next image"
+                >
+                  <span className="sr-only">Next</span>
+                </button>
+              </div>
+
+              <div className="work-image-viewer__controls">
+                <p className="work-image-viewer__counter">
+                  {Math.min(index + 1, images.length)} / {images.length}
+                </p>
+              </div>
             </div>
           )}
         </div>
