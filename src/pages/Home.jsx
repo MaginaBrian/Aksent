@@ -21,6 +21,8 @@ const CLIENT_LOGOS = [
   { name: 'KRK Advocates', logo: '/client-logos/KRK-Advocates-Logo.png' },
   { name: 'PolycomGirls', logo: '/client-logos/PolycomGirls.svg' },
   { name: 'WomanKind Worldwide', logo: '/client-logos/WomanKindWorldwide.png' },
+  { name: 'Lots & Mortar', logo: '/client-logos/Lots-And-Mortar.png' },
+  { name: 'The Last Village Lodge', logo: '/client-logos/Last-Village-Lodge.png' },
 ];
 
 export default function Home() {
