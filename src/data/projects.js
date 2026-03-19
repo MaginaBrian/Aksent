@@ -50,7 +50,7 @@ export const PROJECTS = [
   },
   {
     slug: 'african-biodigester',
-    title: 'African Biodester',
+    title: 'African Biodigester Component-Kenya',
     description: 'Campaign communication and visual identity for biodigester adoption programmes.',
     images: africanBiodigesterImages,
   },

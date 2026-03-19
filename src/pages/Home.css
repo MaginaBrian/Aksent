@@ -251,11 +251,13 @@
   font-size: 1.0625rem;
 }
 
-.what-we-do__list li a {
+.what-we-do__list li a,
+.what-we-do__list li .what-we-do__list-item {
   color: var(--aksent-white);
 }
 
-.what-we-do__list li a:hover {
+.what-we-do__list li a:hover,
+.what-we-do__list li .what-we-do__list-item:hover {
   color: var(--aksent-amethyst);
 }
 

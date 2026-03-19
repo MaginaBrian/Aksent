@@ -20,7 +20,7 @@ const CLIENT_LOGOS = [
   { name: 'KBP', logo: '/client-logos/KBP-Logo-01.jpg' },
   { name: 'KRK Advocates', logo: '/client-logos/KRK-Advocates-Logo.png' },
   { name: 'PolycomGirls', logo: '/client-logos/PolycomGirls.svg' },
-  { name: 'WomanKind Worldwide', logo: '/client-logos/WomanKindWorldwide.png' },
+  { name: 'WomanKind Worldwide', logo: '/client-logos/WomanKindWorldwide.png', bg: '#ffffff' },
   { name: 'Lots & Mortar', logo: '/client-logos/Lots-And-Mortar.png' },
   { name: 'The Last Village Lodge', logo: '/client-logos/Last-Village-Lodge.png' },
 ];
@@ -100,10 +100,10 @@ export default function Home() {
             </p>
             <p className="what-we-do__sub">Our work focuses on:</p>
             <ul className="what-we-do__list">
-              <li><Link to="/work#campaign-communication">Campaign communication</Link></li>
-              <li><Link to="/work#research-publication">Research and publication design</Link></li>
-              <li><Link to="/work#institutional-storytelling">Institutional storytelling</Link></li>
-              <li><Link to="/work#brand-systems">Brand and communication systems</Link></li>
+              <li><span className="what-we-do__list-item">Campaign communication</span></li>
+              <li><span className="what-we-do__list-item">Research and publication design</span></li>
+              <li><span className="what-we-do__list-item">Institutional storytelling</span></li>
+              <li><span className="what-we-do__list-item">Brand and communication systems</span></li>
             </ul>
           </div>
         </div>
@@ -131,6 +131,7 @@ export default function Home() {
                   key={i}
                   className={`client-logo ${i === logoIndex ? 'is-active' : ''}`}
                   aria-hidden={i !== logoIndex}
+                  style={item.bg ? { backgroundColor: item.bg, padding: '0.75rem', borderRadius: '0.5rem' } : undefined}
                 >
                   <img
                     src={item.logo}
