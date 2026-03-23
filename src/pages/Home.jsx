@@ -1,4 +1,3 @@
-import { useState, useCallback, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { getProjectBySlug } from '../data/projects';
 import './Home.css';
@@ -26,22 +25,6 @@ const CLIENT_LOGOS = [
 ];
 
 export default function Home() {
-  const [logoIndex, setLogoIndex] = useState(0);
-  const totalLogos = CLIENT_LOGOS.length;
-
-  const goPrevLogo = useCallback(() => {
-    setLogoIndex((i) => (i <= 0 ? totalLogos - 1 : i - 1));
-  }, [totalLogos]);
-
-  const goNextLogo = useCallback(() => {
-    setLogoIndex((i) => (i >= totalLogos - 1 ? 0 : i + 1));
-  }, [totalLogos]);
-
-  useEffect(() => {
-    const t = setInterval(goNextLogo, 4000);
-    return () => clearInterval(t);
-  }, [goNextLogo]);
-
   return (
     <>
       <section className="hero">
@@ -117,20 +100,13 @@ export default function Home() {
 
       <section className="clients">
         <div className="container">
-          <p className="clients__label">Trusted by</p>
+          <p className="clients__label">TRUSTED BY</p>
           <div className="clients-slider">
-            <button
-              type="button"
-              className="clients-slider__arrow clients-slider__arrow--prev"
-              onClick={goPrevLogo}
-              aria-label="Previous"
-            />
             <div className="clients-slider__track">
               {CLIENT_LOGOS.map((item, i) => (
                 <div
                   key={i}
-                  className={`client-logo ${i === logoIndex ? 'is-active' : ''}`}
-                  aria-hidden={i !== logoIndex}
+                  className="client-logo"
                   style={item.bg ? { backgroundColor: item.bg, padding: '0.75rem', borderRadius: '0.5rem' } : undefined}
                 >
                   <img
@@ -141,23 +117,6 @@ export default function Home() {
                   />
                   <span className="client-logo__name sr-only">{item.name}</span>
                 </div>
-              ))}
-            </div>
-            <button
-              type="button"
-              className="clients-slider__arrow clients-slider__arrow--next"
-              onClick={goNextLogo}
-              aria-label="Next"
-            />
-            <div className="clients-slider__dots">
-              {CLIENT_LOGOS.map((_, i) => (
-                <button
-                  key={i}
-                  type="button"
-                  className={`clients-slider__dot ${i === logoIndex ? 'is-active' : ''}`}
-                  onClick={() => setLogoIndex(i)}
-                  aria-label={`Go to logo ${i + 1}`}
-                />
               ))}
             </div>
           </div>
