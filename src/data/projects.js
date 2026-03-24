@@ -30,7 +30,7 @@ const acreAfricaImages = [
 const bimaSalamaImages = Array.from({ length: 6 }, (_, i) => `/projects/bima-salama/${String(i + 1).padStart(2, '0')}.jpg`);
 const krkAdvocatesImages = ['/projects/krk-advocates/01.png'];
 const redssImages = Array.from({ length: 3 }, (_, i) => `/projects/redss/${String(i + 1).padStart(2, '0')}.png`);
-const icpacImages = Array.from({ length: 4 }, (_, i) => `/projects/icpac/${String(i + 1).padStart(2, '0')}.png`);
+const icpacImages = Array.from({ length: 9 }, (_, i) => `/projects/icpac/${String(i + 1).padStart(2, '0')}.png`);
 const hivosImages = Array.from({ length: 12 }, (_, i) => `/projects/hivos/${String(i + 1).padStart(2, '0')}.png`);
 const movenpickImages = Array.from({ length: 4 }, (_, i) => `/projects/movenpick/${String(i + 1).padStart(2, '0')}.png`);
 const sankaraImages = Array.from({ length: 9 }, (_, i) => `/projects/sankara/${String(i + 1).padStart(2, '0')}.png`);
