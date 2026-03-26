@@ -1,11 +1,48 @@
+import { useEffect, useMemo, useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Page.css';
+import './About.css';
 
 export default function About() {
+  const bgImages = useMemo(
+    () => [
+      '/about-carousel/01.png',
+      '/about-carousel/02.png',
+      '/about-carousel/03.png',
+      '/about-carousel/04.png',
+      '/about-carousel/05.png',
+      '/about-carousel/06.png',
+      '/about-carousel/07.png',
+      '/about-carousel/08.png',
+    ],
+    [],
+  );
+
+  const [bgIndex, setBgIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setBgIndex((i) => (i + 1) % bgImages.length);
+    }, 4500);
+    return () => clearInterval(interval);
+  }, [bgImages.length]);
+
   return (
     <>
-      <section className="page-hero">
-        <div className="container">
+      <section className="page-hero about-hero">
+        <div className="about-hero__carousel" aria-hidden="true">
+          {bgImages.map((src, i) => (
+            <img
+              key={src}
+              src={src}
+              alt=""
+              className={`about-hero__bg ${i === bgIndex ? 'is-active' : ''}`}
+            />
+          ))}
+          <div className="about-hero__overlay" />
+        </div>
+
+        <div className="container about-hero__content">
           <h1 className="page-hero__title">Who we are</h1>
           <p className="page-hero__lead">
             AKSENT was founded in 2009 as a design studio.
