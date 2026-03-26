@@ -19,7 +19,10 @@ const CLIENT_LOGOS = [
   { name: 'KBP', logo: '/client-logos/KBP-Logo-01.jpg' },
   { name: 'KRK Advocates', logo: '/client-logos/KRK-Advocates-Logo.png' },
   { name: 'PolycomGirls', logo: '/client-logos/PolycomGirls.svg' },
-  { name: 'WomanKind Worldwide', logo: '/client-logos/WomanKindWorldwide.png', bg: '#ffffff' },
+  { name: 'WomanKind Worldwide', logo: '/client-logos/WomanKindWorldwide.png' },
+  { name: 'Pill Box', logo: '/client-logos/Pill-Box.png' },
+  { name: 'Yash Poles', logo: '/client-logos/Yash-Poles.png' },
+  { name: 'NAL', logo: '/client-logos/NAL.png' },
   { name: 'Lots & Mortar', logo: '/client-logos/Lots-And-Mortar.png' },
   { name: 'The Last Village Lodge', logo: '/client-logos/Last-Village-Lodge.png' },
 ];
@@ -107,7 +110,6 @@ export default function Home() {
                 <div
                   key={i}
                   className="client-logo"
-                  style={item.bg ? { backgroundColor: item.bg, padding: '0.75rem', borderRadius: '0.5rem' } : undefined}
                 >
                   <img
                     src={item.logo}
