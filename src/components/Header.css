@@ -47,10 +47,21 @@
 
 @media (max-width: 420px) {
   .aksent-header__logo-img--full {
-    display: none;
+    display: block;
+    height: 4.5rem;
   }
   .aksent-header__logo-img--icon {
-    display: block;
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .aksent-header__inner {
+    min-height: 6rem;
+  }
+
+  .aksent-header__logo-img {
+    height: 5rem;
   }
 }
 

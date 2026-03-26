@@ -30,6 +30,15 @@ export default function About() {
   return (
     <>
       <section className="page-hero about-hero">
+        <div className="about-hero__header">
+          <div className="container">
+            <h1 className="page-hero__title">Who we are</h1>
+            <p className="page-hero__lead">
+              AKSENT was founded in 2009 as a design studio.
+            </p>
+          </div>
+        </div>
+
         <div className="about-hero__carousel" aria-hidden="true">
           {bgImages.map((src, i) => (
             <img
@@ -39,14 +48,6 @@ export default function About() {
               className={`about-hero__bg ${i === bgIndex ? 'is-active' : ''}`}
             />
           ))}
-          <div className="about-hero__overlay" />
-        </div>
-
-        <div className="container about-hero__content">
-          <h1 className="page-hero__title">Who we are</h1>
-          <p className="page-hero__lead">
-            AKSENT was founded in 2009 as a design studio.
-          </p>
         </div>
       </section>
       <section className="page-content">

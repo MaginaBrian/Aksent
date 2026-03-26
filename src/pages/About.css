@@ -2,14 +2,34 @@
 .about-hero {
   position: relative;
   overflow: hidden;
-  /* Keep the background colour static while images animate */
   background: var(--aksent-platinum);
+  padding: 0;
+}
+
+.about-hero__header {
+  position: relative;
+  z-index: 2;
+  background: var(--aksent-lime);
+  padding: calc(var(--space-2xl) + var(--space-sm)) 0;
+}
+
+.about-hero__header .page-hero__title {
+  color: var(--aksent-white);
+  margin-bottom: var(--space-sm);
+}
+
+.about-hero__header .page-hero__lead {
+  color: rgba(255,255,255,0.85);
+  margin: 0;
+  padding: 0;
 }
 
 .about-hero__carousel {
-  position: absolute;
-  inset: 0;
-  z-index: 0;
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: clamp(200px, 34vh, 320px);
+  overflow: hidden;
   background: var(--aksent-platinum);
 }
 
@@ -29,34 +49,7 @@
   opacity: 1;
 }
 
-.about-hero__overlay {
-  position: absolute;
-  inset: 0;
-  /* Soft veil so text stays readable and feels intentional */
-  background: rgba(234, 239, 239, 0.55);
-}
-
-.about-hero__content {
-  position: relative;
-  z-index: 1;
-  animation: aboutFloat 7s ease-in-out infinite;
-}
-
-@keyframes aboutFloat {
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-6px);
-  }
-}
-
 @media (prefers-reduced-motion: reduce) {
-  .about-hero__content {
-    animation: none;
-  }
-
   .about-hero__bg {
     transition: none;
   }
