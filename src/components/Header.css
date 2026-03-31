@@ -26,7 +26,7 @@
 }
 
 .aksent-header__logo-img {
-  height: 6.5rem;
+  height: 3.9rem;
   width: auto;
   object-fit: contain;
   transition: transform 0.3s ease;
@@ -48,7 +48,7 @@
 @media (max-width: 420px) {
   .aksent-header__logo-img--full {
     display: block;
-    height: 3.7rem;
+    height: 2.22rem;
   }
   .aksent-header__logo-img--icon {
     display: none;
@@ -61,7 +61,7 @@
   }
 
   .aksent-header__logo-img {
-    height: 4.25rem;
+    height: 2.55rem;
   }
 }
 
@@ -176,7 +176,7 @@
   }
 
   .aksent-header__logo-img--full {
-    height: 7.2rem;
+    height: 4.32rem;
     display: block;
   }
   .aksent-header__logo-img--icon {
