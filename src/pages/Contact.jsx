@@ -24,7 +24,7 @@ export default function Contact() {
             </div>
             <div className="contact-block">
               <h2 className="contact-block__heading">Address</h2>
-              <p>Jabavu Road, PCEA Flats, Kilimani, Nairobi, Kenya</p>
+              <p>Jabavu road, Kilimani, Nairobi, Kenya</p>
             </div>
             <div className="contact-block">
               <h2 className="contact-block__heading">Web</h2>
