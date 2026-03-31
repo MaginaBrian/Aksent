@@ -28,8 +28,11 @@ const acreAfricaImages = [
   '/projects/acre-africa/28.png',
 ];
 const bimaSalamaImages = Array.from({ length: 6 }, (_, i) => `/projects/bima-salama/${String(i + 1).padStart(2, '0')}.jpg`);
-const krkAdvocatesImages = ['/projects/krk-advocates/01.png'];
-const redssImages = Array.from({ length: 7 }, (_, i) => `/projects/redss/${String(i + 1).padStart(2, '0')}.png`);
+const krkAdvocatesImages = [
+  '/projects/krk-advocates/01.png',
+  '/projects/krk-advocates/02.png',
+];
+const redssImages = Array.from({ length: 12 }, (_, i) => `/projects/redss/${String(i + 1).padStart(2, '0')}.png`);
 const icpacImages = Array.from({ length: 9 }, (_, i) => `/projects/icpac/${String(i + 1).padStart(2, '0')}.png`);
 const hivosImages = Array.from({ length: 12 }, (_, i) => `/projects/hivos/${String(i + 1).padStart(2, '0')}.png`);
 const womankindWorldwideImages = Array.from({ length: 5 }, (_, i) => `/projects/womankind-worldwide/${String(i + 1).padStart(2, '0')}.png`);

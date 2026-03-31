@@ -26,14 +26,14 @@
 }
 
 .aksent-header__logo-img {
-  height: 8rem;
+  height: 6.5rem;
   width: auto;
   object-fit: contain;
   transition: transform 0.3s ease;
 }
 
 .aksent-header__logo:hover .aksent-header__logo-img {
-  transform: scale(1.15);
+  transform: scale(1.08);
 }
 
 .aksent-header__logo-img--icon {
@@ -48,7 +48,7 @@
 @media (max-width: 420px) {
   .aksent-header__logo-img--full {
     display: block;
-    height: 4.5rem;
+    height: 3.7rem;
   }
   .aksent-header__logo-img--icon {
     display: none;
@@ -57,11 +57,11 @@
 
 @media (max-width: 600px) {
   .aksent-header__inner {
-    min-height: 6rem;
+    min-height: 5.2rem;
   }
 
   .aksent-header__logo-img {
-    height: 5rem;
+    height: 4.25rem;
   }
 }
 
@@ -176,7 +176,7 @@
   }
 
   .aksent-header__logo-img--full {
-    height: 9rem;
+    height: 7.2rem;
     display: block;
   }
   .aksent-header__logo-img--icon {
