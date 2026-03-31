@@ -38,9 +38,8 @@ export default function Footer() {
                 <a href="mailto:hello@aksent.co.ke">hello@aksent.co.ke</a>
               </li>
               <li>
-                Jabavu road<br />
-                Kilimani<br />
-                Nairobi, Kenya
+                Jabavu road , kilimani<br />
+                Nairobi Kenya
               </li>
               <li>
                 <a href="https://www.aksent.co.ke" target="_blank" rel="noopener noreferrer">
