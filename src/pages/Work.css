@@ -4,6 +4,40 @@
   gap: var(--space-xl);
 }
 
+/* ── Capabilities overview (copy block above grid) ── */
+.work-capabilities {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-lg);
+  margin: 0 0 var(--space-2xl);
+}
+
+@media (min-width: 768px) {
+  .work-capabilities {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--space-xl);
+  }
+}
+
+.work-capability__title {
+  font-family: var(--font-body);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--aksent-ink);
+  opacity: 0.75;
+  margin: 0 0 var(--space-xs);
+}
+
+.work-capability__desc {
+  margin: 0;
+  color: var(--aksent-ink);
+  opacity: 0.9;
+  line-height: 1.65;
+  max-width: none;
+}
+
 /* ── Capability filters (inline text) ── */
 .work-filters {
   margin-top: var(--space-md);

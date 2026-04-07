@@ -80,7 +80,7 @@ export default function Work() {
         <div className="container">
           <h1 className="page-hero__title">Our Work</h1>
           <p className="page-hero__lead">
-            Work that translates complexity into clarity.
+            We structure complex work into communication systems that move across audiences, institutions, and public space.
           </p>
           <div className="work-filters" aria-label="Filter projects by capability">
             {CAPABILITIES.map((cap) => (
@@ -103,6 +103,33 @@ export default function Work() {
       </section>
       <section className="page-content work-content">
         <div className="container">
+          <div className="work-capabilities" aria-label="Capabilities overview">
+            <div className="work-capability">
+              <h2 className="work-capability__title">Brand Systems</h2>
+              <p className="work-capability__desc">
+                We design identity and communication systems that give organisations a clear structure for how they appear, communicate, and stay consistent across contexts.
+              </p>
+            </div>
+            <div className="work-capability">
+              <h2 className="work-capability__title">Campaign Communication</h2>
+              <p className="work-capability__desc">
+                We develop campaign communication that translates complex issues into clear, compelling messages that reach audiences and generate engagement.
+              </p>
+            </div>
+            <div className="work-capability">
+              <h2 className="work-capability__title">Knowledge Publications</h2>
+              <p className="work-capability__desc">
+                We design reports, briefs, manuals, and long-form publications that structure complex information into formats people can read, navigate, and use.
+              </p>
+            </div>
+            <div className="work-capability">
+              <h2 className="work-capability__title">Institutional Platforms</h2>
+              <p className="work-capability__desc">
+                We build communication environments — from summits to public-facing platforms — that position organisations clearly and hold their presence in shared spaces.
+              </p>
+            </div>
+          </div>
+
           <div className="work-grid work-grid--projects">
             {filteredProjectsWithPrimary.map(({ project, primaryCapability }) => (
               <Link
