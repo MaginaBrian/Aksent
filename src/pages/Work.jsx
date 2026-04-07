@@ -46,6 +46,25 @@ const CAPABILITY_LABELS = {
   institutional: 'INSTITUTIONAL PLATFORM',
 };
 
+const CAPABILITY_DETAILS = {
+  brand: {
+    title: 'Brand Systems',
+    desc: 'We design identity and communication systems that give organisations a clear structure for how they appear, communicate, and stay consistent across contexts.',
+  },
+  campaign: {
+    title: 'Campaign Communication',
+    desc: 'We develop campaign communication that translates complex issues into clear, compelling messages that reach audiences and generate engagement.',
+  },
+  publications: {
+    title: 'Knowledge Publications',
+    desc: 'We design reports, briefs, manuals, and long-form publications that structure complex information into formats people can read, navigate, and use.',
+  },
+  institutional: {
+    title: 'Institutional Platforms',
+    desc: 'We build communication environments — from summits to public-facing platforms — that position organisations clearly and hold their presence in shared spaces.',
+  },
+};
+
 function getPrimaryCapability(capabilities) {
   const priority = ['campaign', 'publications', 'brand', 'institutional'];
   return priority.find((id) => capabilities.includes(id)) ?? null;
@@ -103,32 +122,16 @@ export default function Work() {
       </section>
       <section className="page-content work-content">
         <div className="container">
-          <div className="work-capabilities" aria-label="Capabilities overview">
-            <div className="work-capability">
-              <h2 className="work-capability__title">Brand Systems</h2>
-              <p className="work-capability__desc">
-                We design identity and communication systems that give organisations a clear structure for how they appear, communicate, and stay consistent across contexts.
+          {activeCapability !== 'all' && CAPABILITY_DETAILS[activeCapability] && (
+            <div className="work-capability-panel" aria-label="Selected capability">
+              <h2 className="work-capability-panel__title">
+                {CAPABILITY_DETAILS[activeCapability].title}
+              </h2>
+              <p className="work-capability-panel__desc">
+                {CAPABILITY_DETAILS[activeCapability].desc}
               </p>
             </div>
-            <div className="work-capability">
-              <h2 className="work-capability__title">Campaign Communication</h2>
-              <p className="work-capability__desc">
-                We develop campaign communication that translates complex issues into clear, compelling messages that reach audiences and generate engagement.
-              </p>
-            </div>
-            <div className="work-capability">
-              <h2 className="work-capability__title">Knowledge Publications</h2>
-              <p className="work-capability__desc">
-                We design reports, briefs, manuals, and long-form publications that structure complex information into formats people can read, navigate, and use.
-              </p>
-            </div>
-            <div className="work-capability">
-              <h2 className="work-capability__title">Institutional Platforms</h2>
-              <p className="work-capability__desc">
-                We build communication environments — from summits to public-facing platforms — that position organisations clearly and hold their presence in shared spaces.
-              </p>
-            </div>
-          </div>
+          )}
 
           <div className="work-grid work-grid--projects">
             {filteredProjectsWithPrimary.map(({ project, primaryCapability }) => (

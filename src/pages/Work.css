@@ -4,22 +4,16 @@
   gap: var(--space-xl);
 }
 
-/* ── Capabilities overview (copy block above grid) ── */
-.work-capabilities {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: var(--space-lg);
+/* ── Selected capability panel (shown after filter click) ── */
+.work-capability-panel {
   margin: 0 0 var(--space-2xl);
+  padding: var(--space-lg);
+  background: var(--aksent-platinum);
+  border: 1px solid var(--aksent-gray-100);
+  border-radius: 8px;
 }
 
-@media (min-width: 768px) {
-  .work-capabilities {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: var(--space-xl);
-  }
-}
-
-.work-capability__title {
+.work-capability-panel__title {
   font-family: var(--font-body);
   font-size: 0.8125rem;
   font-weight: 700;
@@ -30,7 +24,7 @@
   margin: 0 0 var(--space-xs);
 }
 
-.work-capability__desc {
+.work-capability-panel__desc {
   margin: 0;
   color: var(--aksent-ink);
   opacity: 0.9;
